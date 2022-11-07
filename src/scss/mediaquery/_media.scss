@@ -1,0 +1,182 @@
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    //opacity: 0.8;
+    background-color: #fff;
+    z-index: 9;
+
+    .nav-item {
+      font-size: 1.4rem;
+      padding-right: 0.5rem;
+    }
+
+    // .nav-item:hover {
+    //   color: $white;
+    // }
+
+    .nav-link {
+      font-size: 18px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      color: #2f3d46;
+    }
+
+    .nav-link:hover {
+      color: #f2f2f2;
+      //border-bottom: $custom-info solid 2px;
+    }
+
+    .btn:hover {
+      background-color: #2f3d46;
+    }
+  }
+
+  #nav-height {
+    line-height: 2.5;
+  }
+
+  #showcase {
+    min-height: 400px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  .mb-resp {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-item {
+    height: 260px;
+  }
+
+  .dropdown-flex {
+    display: block;
+  }
+
+  .card {
+    .card-flex {
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  //font
+  .showcase-text {
+    padding: 2rem 0 0 0;
+  }
+
+  .font-h1 {
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .font-h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .font-h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .font-p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .font-h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #showcase {
+    min-height: 400px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  .mb-resp {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-item {
+    height: 400px;
+  }
+
+  // .card {
+  //   width: 5rem;
+  // }
+
+  .dropdown-flex {
+    display: block;
+  }
+
+  .card {
+    .card-flex {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  //font
+  .showcase-text {
+    padding: 2rem 0 0 0;
+  }
+
+  .font-h1 {
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  .font-h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .font-h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .font-p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .font-h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}

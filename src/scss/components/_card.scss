@@ -1,0 +1,25 @@
+.card {
+  .card-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 15rem;
+      height: 100%;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.bg-card {
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  position: relative;
+  border: rgb(105, 105, 105) solid 1px;
+}

@@ -1,0 +1,76 @@
+@use "../components/variables" as *;
+@use "../mixin/mixins" as *;
+
+#showcase {
+  background: url("../../img/mendcargo3.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#showcase-about {
+  background: url("../../img/mendcargo2.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#service {
+  background: url("../../img/mendcontact.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#tracking {
+  background: url("../../img/mendnavi.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#tracking-search {
+  background: url("../../img/mend_track.jpg");
+
+  @include show($secondary-overlay);
+}
+
+// Home value Estimator
+#account-heading {
+  min-height: 300px;
+  background: url("../../img/flight.jpg");
+
+  @include parallax($white, 700);
+}
+
+.account-overlay {
+  @include overlay($tertiary-overlay);
+}
+
+// WHY-BUY
+#service-heading {
+  min-height: 300px;
+  background: url("../../img/mendcontact.jpg");
+
+  @include parallax($white, 700);
+}
+
+#dollar-heading {
+  min-height: 500px;
+  background: url("../../img/carrierty.jpg");
+
+  @include parallax($white, 700);
+}
+
+#about-heading {
+  min-height: 300px;
+  background: url("../../img/carrierty.jpg");
+
+  @include parallax($white, 700);
+}
+.money-pos {
+  line-height: 28.75rem;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: $custom-green;
+  border-color: #fff;
+}

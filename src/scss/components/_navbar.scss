@@ -1,0 +1,36 @@
+@use "variables" as *;
+.navbar {
+  //opacity: 0.8;
+  background-color: #fff;
+  z-index: 9;
+
+  .nav-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-right: 0.5rem;
+  }
+
+  // .nav-item:hover {
+  //   color: $white;
+  // }
+
+  .nav-link {
+    font-size: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: $custom-secondary;
+  }
+
+  .nav-link:hover {
+    color: #f2f2f2;
+    //border-bottom: $custom-info solid 2px;
+  }
+
+  .btn:hover {
+    background-color: $btn-primary-hover;
+  }
+}
+
+#nav-height {
+  line-height: 2;
+}

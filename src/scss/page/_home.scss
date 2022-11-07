@@ -1,0 +1,28 @@
+@use "../mixin/mixins" as *;
+@use "../components/variables" as *;
+
+#home-showcase {
+  background: url("../../img/house.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#sale-showcase {
+  background: url("../../img/salepic.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+#rent-showcase {
+  background: url("../../img/rentpic.jpg");
+
+  @include showcase($secondary-overlay);
+}
+
+.showcase-text {
+  padding: 8rem 0;
+}
+
+.carousel-item {
+  height: 600px;
+}

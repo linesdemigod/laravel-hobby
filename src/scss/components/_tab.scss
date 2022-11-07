@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+.nav-tabs {
+  .nav-item {
+    a {
+      color: rgb(8, 8, 8);
+    }
+
+    padding-right: 0.1rem;
+  }
+  .nav-link.active {
+    background-color: $custom-info-secondary;
+    color: $black;
+  }
+}
+
+.nav-slide {
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: #fff;
+    background-color: #000;
+    border-color: #dee2e6 #dee2e6 #fff;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgb(252, 248, 248);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-item {
+    padding-right: 3rem;
+  }
+
+  p {
+    font-weight: 700;
+  }
+  .nav-link:hover {
+    border: 2px solid rgba(255, 38, 38, 0.5);
+  }
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  background: $custom-warning;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.nav-tabs .nav-item a {
+  color: #fff;
+}
+
+.tab-content {
+  background: #fff;
+  padding: 2rem;
+}
+
+.tab-slide {
+  .img-fluid {
+    max-height: 296px;
+  }
+}

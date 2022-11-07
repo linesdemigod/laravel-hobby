@@ -1,0 +1,64 @@
+.fa-phone {
+  transform: scaleX(-1);
+}
+
+// feather icon
+.icon-md {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  cursor: pointer;
+}
+
+.icon-xxs {
+  width: 30px;
+  height: 30px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  cursor: pointer;
+}
+
+.icon-lg {
+  width: 40px;
+  height: 40px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  cursor: pointer;
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  cursor: pointer;
+}
+
+.icon-animate {
+  &:hover {
+    color: #009aa6;
+    animation: rotation 2s;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

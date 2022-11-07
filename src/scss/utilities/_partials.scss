@@ -1,0 +1,12 @@
+@use "../components" as *;
+
+.custom-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.pg-opt {
+  border-bottom: 1px solid #f8f8f8;
+  background: $gray-200;
+  color: #2f3d46;
+}

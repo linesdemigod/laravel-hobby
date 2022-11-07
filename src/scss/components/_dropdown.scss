@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.dropdown-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  background-color: $custom-secondary;
+
+  .dropdown-caption {
+    padding-right: 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $black;
+  }
+
+  li a {
+    font-size: 0.9rem;
+    color: $black;
+
+    &:hover {
+      background-image: none;
+      background-color: transparent;
+      color: $gray-500;
+    }
+  }
+}

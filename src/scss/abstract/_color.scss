@@ -1,0 +1,32 @@
+@use "../components/variables" as *;
+
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  .bg-mix-#{$key} {
+    background-color: mix(black, $val, 20%);
+  }
+  .border-#{$key} {
+    border-color: $val;
+  }
+
+  .btn-#{$key} {
+    background-color: $val;
+    color: $white;
+  }
+
+  .btn .btn-#{$key}:hover {
+    background-color: mix(black, $val, 10%);
+    color: $white;
+  }
+
+  .btn-#{$key}:focus {
+    background-color: mix(black, $val, 10%);
+    color: $white;
+  }
+}

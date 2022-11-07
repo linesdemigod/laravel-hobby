@@ -1,0 +1,75 @@
+@mixin showcase($col) {
+  position: relative;
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 500px;
+
+  .primary-overlay {
+    background: $col;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+}
+
+@mixin show($col) {
+  position: relative;
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 500px;
+
+  .primary-overlay {
+    background: $col;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+}
+
+// MIXINS
+@mixin parallax($col, $font-weight) {
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // text-align: center;
+  color: $col;
+  h3 {
+    font-weight: $font-weight;
+  }
+}
+
+@mixin overlay($col) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $col;
+}
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin red-underline {
+  h1::after {
+    content: "";
+    display: block;
+    border-bottom: 5px solid rgb(150, 9, 9);
+    width: 10rem;
+    margin: 4px auto 4px auto;
+    // margin-top: 4px;
+    // margin-bottom: 4px;
+  }
+}
