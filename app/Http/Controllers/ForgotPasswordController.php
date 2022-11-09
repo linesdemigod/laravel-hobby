@@ -15,12 +15,12 @@ class ForgotPasswordController extends Controller
 	//show the forgot password
 	public function show()
 	{
-		return view('forgotpassword');
+		return view('reset.forgotpassword');
 	}
 
 	public function reset($token)
 	{
-		return view('reset-password', [
+		return view('reset.reset-password', [
 			'token' => $token,
 		]);
 	}
@@ -39,10 +39,10 @@ class ForgotPasswordController extends Controller
 			'token' => $token,
 		]);
 
-		Mail::to($request->email)->send(new PasswordResetMail($request->email, ['token' => $token]));
+		$mail = Mail::to($request->email)->send(new PasswordResetMail($request->email, ['token' => $token]));
 
-		//redirect to the home page
-		return redirect()->route('login')->with('message', 'reset password link sent to mail');
+		//redirect to the hlogin page
+		return redirect()->route('login')->with('message', 'Reset password link sent to your email');
 	}
 
 	public function update(Request $request)
@@ -66,7 +66,7 @@ class ForgotPasswordController extends Controller
 			->update(['password' => Hash::make($request->password)]);
 		PasswordResets::where(['email' => $request->email])->delete();
 
-		return redirect()->route('login')->with('message', 'Your password has been changed!');
+		return redirect()->route('login')->with('message', 'Your password has been changed successfully!');
 	}
 
 }

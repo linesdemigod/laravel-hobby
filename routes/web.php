@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\HobbyController;
 use App\Http\Controllers\UserController;
@@ -27,6 +28,10 @@ Route::post('/register', [UserController::class, 'store']);
 //login
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [UserController::class, 'authenticate']);
+
+//change password
+Route::get('/change-password', [ChangePassword::class, 'index'])->name('changepassword')->middleware('auth');
+Route::put('/change-password', [ChangePassword::class, 'update']);
 
 //forgot password
 Route::get('/forgotpassword', [ForgotPasswordController::class, 'show'])->name('forgotpassword')->middleware('guest');

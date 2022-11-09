@@ -41,6 +41,9 @@
                             <a class="nav-link" href="{{ route('hobby') }}">Hobby</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('changepassword') }}">Change password</a>
+                        </li>
+                        <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <input type="submit" class="nav-link bg-danger border border-0" value="Logout">
