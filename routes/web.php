@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\HobbyController;
 use App\Http\Controllers\UserController;
 use GuzzleHttp\Middleware;
@@ -16,14 +17,26 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
+//landing page
 Route::get('/', function () {return view('index');})->name('home');
 
+//register
 Route::get('/register', [UserController::class, 'create'])->name('register')->middleware('guest');
 Route::post('/register', [UserController::class, 'store']);
 
+//login
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [UserController::class, 'authenticate']);
 
+//forgot password
+Route::get('/forgotpassword', [ForgotPasswordController::class, 'show'])->name('forgotpassword')->middleware('guest');
+Route::post('/forgotpassword', [ForgotPasswordController::class, 'store'])->name('forgotpassword');
+
+//reset password
+Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'reset'])->name('resetpassword')->middleware('guest');
+Route::put('/reset-password', [ForgotPasswordController::class, 'update'])->name('resetpassword.post')->middleware('guest');
+
+//logout
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 //show all listing

@@ -56,7 +56,7 @@ class UserController extends Controller
 			'password' => 'required',
 		]);
 
-		if (auth()->attempt($formData)) {
+		if (auth()->attempt($formData, $request->remember)) {
 			$request->session()->regenerate();
 			return redirect()->route('dashboard')->with('message', 'You are logged in');
 		}

@@ -7,9 +7,10 @@
                 <div class="col-md-6 mx-auto">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="text-center py-2">Login</h3>
-                            <form action="{{ route('login') }}" method="Post">
+                            <h3 class="text-center py-2">Reset password</h3>
+                            <form action="{{ route('resetpassword.post') }}" method="Post">
                                 @csrf
+                                @method('PUT')
                                 <div class="form-group mb-3">
                                     <label for="email" class="text-muted">Email</label>
                                     <input type="email" class="form-control" name="email" placeholder="john@example.com"
@@ -17,8 +18,10 @@
                                     @error('email')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
+
                                 </div>
                                 <div class="form-group mb-3">
+                                    <input type="hidden" name="token" value="{{ $token }}">
                                     <label for="password" class="text-muted">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password"
                                         id="password">
@@ -26,16 +29,17 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                                    <label class="form-check-label" for="remember">Remember me</label>
-                                    <a href="{{ route('forgotpassword') }}" class="ps-3 text-decoration-none">Forgot
-                                        password</a>
+                                <div class="form-group mb-3">
+                                    <label for="password_confirmation" class="text-muted">Confirm Password</label>
+                                    <input type="password" class="form-control" name="password_confirmation"
+                                        placeholder="Confirm Password" id="password_confirmation">
+                                    @error('password_confirmation')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
-
                                 <div class="form-group mb-3">
                                     <button type="submit" name="submit"
-                                        class="form-control btn btn-danger btn-block">Login</button>
+                                        class="form-control btn btn-custom-warning btn-block">Change password</button>
                                 </div>
                             </form>
                         </div>
