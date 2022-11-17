@@ -1,5 +1,9 @@
 @extends('components.layout')
 
+@section('title')
+    {{ 'Dashboard' }}
+@endsection
+
 @section('content')
 
     @include('partials._search')

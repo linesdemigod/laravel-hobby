@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <title>Document</title>
+    <title>Hobby | @yield('title')</title>
 </head>
 
 <body>
@@ -43,6 +43,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('changepassword') }}">Change password</a>
                         </li>
+                        @if (Auth::user()->role == '1')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('posty') }}">Admin</a>
+                            </li>
+                        @endif
                         <li class="nav-item">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf

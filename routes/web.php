@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\HobbyController;
@@ -20,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 //landing page
 Route::get('/', function () {return view('index');})->name('home');
+
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+	Route::get('/posty', [AdminController::class, 'show'])->name('posty');
+});
 
 //register
 Route::get('/register', [UserController::class, 'create'])->name('register')->middleware('guest');
