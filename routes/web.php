@@ -40,7 +40,7 @@ Route::put('/change-password', [ChangePassword::class, 'update']);
 
 //forgot password
 Route::get('/forgotpassword', [ForgotPasswordController::class, 'show'])->name('forgotpassword')->middleware('guest');
-Route::post('/forgotpassword', [ForgotPasswordController::class, 'store'])->name('forgotpassword');
+Route::post('/forgotpassword', [ForgotPasswordController::class, 'store']);
 
 //reset password
 Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'reset'])->name('resetpassword')->middleware('guest');
